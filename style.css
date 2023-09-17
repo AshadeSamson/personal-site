@@ -35,8 +35,9 @@ section {
 
 .name {
   font-weight: bolder;
+  font-family: 'DM Serif Display', serif;
   text-align: center;
-  font-size: calc(var(--head-one) + 15px);
+  font-size: calc(var(--head-one) + 30px);
 }
 
 .profile-link-box {
