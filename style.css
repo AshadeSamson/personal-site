@@ -22,7 +22,7 @@ body {
   background-image: url('bg.jpg');
   background-size: cover;
   background-repeat: no-repeat;
-  background-blend-mode: darken;
+  background-blend-mode: multiply;
   color: var(--white);
   font-family: 'Montserrat', sans-serif;
   max-width: 750px;
