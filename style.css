@@ -77,12 +77,14 @@ h1.name {
   margin-bottom: 3px;
 }
 
-.text,
+
 .text-list {
-  text-align: justify;
   line-height: 1.5;
 }
 
+.text {
+  text-align: justify;
+}
 
 .text-small {
   font-size: calc(1px + var(--head-three));
