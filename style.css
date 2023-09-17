@@ -1,1 +1,88 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --header: 1.5rem;
+  --head-one: 1.2rem;
+  --head-two: 1rem;
+  --head-three: 0.75rem;
+  --black: rgb(9, 8, 9);
+  --orange: rgb(205, 95, 0);
+  --white: rgb(250, 250, 250);
+  --grey: rgb(226, 219, 219);
+  --sky-blue: rgb(152, 152, 235);
+}
+
+body {
+  background-color: var(--black);
+  color: var(--white);
+  font-family: sans-serif;
+  max-width: 750px;
+  margin: auto auto;
+}
+
+section {
+  padding: 10px;
+}
+
+.top-heading {
+  text-align: center;
+}
+
+.name {
+  font-weight: bolder;
+  text-align: center;
+  font-size: calc(var(--head-one) + 15px);
+}
+
+.profile-link-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-links {
+  margin-right: 10px;
+  text-decoration: none;
+  color: var(--sky-blue);
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.title {
+  font-size: var(--header);
+  color: var(--orange);
+  margin-bottom: 5px;
+}
+
+.title-one {
+  font-size: var(--head-one);
+  margin-bottom: 3px;
+}
+
+.title-two {
+  font-size: var(--head-two);
+  margin-bottom: 3px;
+}
+
+.text,
+.text-list {
+  text-align: justify;
+}
+
+.text-small {
+  font-size: calc(1px + var(--head-three));
+}
+
+.points li {
+  color: var(--grey);
+  font-size: var(--head-three);
+}
+hr {
+  margin-bottom: 5px;
+}
 
