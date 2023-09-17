@@ -33,8 +33,7 @@ section {
   text-align: center;
 }
 
-.name {
-  font-weight: bolder;
+h1.name {
   font-family: 'DM Serif Display', serif;
   text-align: center;
   font-size: calc(var(--head-one) + 30px);
