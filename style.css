@@ -20,6 +20,9 @@
 body {
   background-color: var(--black);
   background-image: url('bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: darken;
   color: var(--white);
   font-family: 'Montserrat', sans-serif;
   max-width: 750px;
