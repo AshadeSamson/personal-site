@@ -83,9 +83,6 @@ h1.name {
   line-height: 1.5;
 }
 
-p.test {
-  margin-bottom: 10px;
-}
 
 .text-small {
   font-size: calc(1px + var(--head-three));
