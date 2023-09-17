@@ -113,6 +113,6 @@ footer {
 
 .copyright{
   font-weight: 700;
-  font-size: var(--header);
+  font-size: var(--head-three);
 }
 
