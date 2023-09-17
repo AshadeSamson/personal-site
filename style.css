@@ -109,10 +109,11 @@ footer {
   background-color: var(--black);
   color: var(--white);
   text-align: center;
+  padding: 25px;
 }
 
 .copyright{
-  font-weight: 700;
+  font-weight: 400;
   font-size: var(--head-three);
 }
 
