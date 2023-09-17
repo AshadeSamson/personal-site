@@ -37,6 +37,7 @@ h1.name {
   font-family: 'DM Serif Display', serif;
   text-align: center;
   font-size: calc(var(--head-one) + 30px);
+  letter-spacing: 2px;
 }
 
 .profile-link-box {
@@ -79,15 +80,18 @@ h1.name {
 .text,
 .text-list {
   text-align: justify;
+  line-height: 1.5;
 }
 
 .text-small {
   font-size: calc(1px + var(--head-three));
+  line-height: 1.5;
 }
 
 .points li {
   color: var(--grey);
   font-size: var(--head-three);
+  line-height: 1.5;
 }
 hr {
   margin-bottom: 5px;
