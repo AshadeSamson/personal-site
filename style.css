@@ -100,7 +100,19 @@ h1.name {
   font-size: var(--head-three);
   line-height: 1.5;
 }
+
 hr {
   margin-bottom: 5px;
+}
+
+footer {
+  background-color: var(--black);
+  color: var(--white);
+  text-align: center;
+}
+
+.copyright{
+  font-weight: 700;
+  font-size: var(--header);
 }
 
