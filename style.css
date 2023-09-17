@@ -53,6 +53,13 @@ section {
   font-weight: bold;
 }
 
+.projects-link {
+  text-decoration: none;
+  color: var(--sky-blue);
+  cursor: pointer;
+  font-weight: bold;
+}
+
 .title {
   font-size: var(--header);
   color: var(--orange);
