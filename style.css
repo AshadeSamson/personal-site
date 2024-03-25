@@ -117,3 +117,20 @@ footer {
   font-size: var(--head-three);
 }
 
+
+/* PROJECTS SECTION */
+.projects-container{
+  overflow-x: hidden;
+}
+
+.project-content{
+  display: flex;
+}
+
+.project-item{
+  flex: 0 0 100%;
+  min-width: 0; 
+}
+
+
+
