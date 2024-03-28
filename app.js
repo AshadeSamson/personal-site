@@ -1,7 +1,12 @@
+const rootNode = document.querySelector('.project-view')
+const viewNode = document.querySelector('.projects-container')
 
-const emblaNode = document.querySelector('.projects-container')
-const options = { loop: false }
-const plugins = [EmblaCarouselAutoplay()]
-const emblaApi = EmblaCarousel(emblaNode, options, plugins)
+const prevButtonNode = rootNode.querySelector('.prev')
+const nextButtonNode = rootNode.querySelector('.next')
 
-console.log(emblaApi.slideNodes()) 
+
+const emblaApi = EmblaCarousel(viewNode)
+
+prevButtonNode.addEventListener('click', emblaApi.scrollPrev, false)
+nextButtonNode.addEventListener('click', emblaApi.scrollNext, false)
+

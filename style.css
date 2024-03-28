@@ -35,13 +35,14 @@ section {
 
 .top-heading {
   text-align: center;
+  padding: 0;
 }
 
 h1.name {
-  font-family: 'DM Serif Display', serif;
   text-align: center;
   font-size: calc(var(--head-one) + 30px);
   letter-spacing: 2px;
+  margin: 10px 10px;
 }
 
 .profile-link-box {
@@ -52,10 +53,24 @@ h1.name {
 
 .profile-links {
   margin-right: 10px;
-  text-decoration: none;
-  color: var(--sky-blue);
   cursor: pointer;
-  font-weight: bold;
+}
+
+.socials{
+  width: 25px;
+  height: auto;
+}
+
+.divider{
+  text-align: center;
+}
+
+.horizontal{
+  width: 150px;
+  height: 7.5px;
+  display: inline-block;
+  border: none;
+  background-color: var(--orange);
 }
 
 .projects-link {
