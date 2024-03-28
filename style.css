@@ -76,6 +76,14 @@ h1.name {
   background-color: var(--orange);
 }
 
+.align-center{
+  text-align: center;
+}
+
+.bold{
+  font-weight: 700;
+}
+
 .projects-link {
   text-decoration: none;
   color: var(--sky-blue);
@@ -111,6 +119,7 @@ h1.name {
 .text-small {
   font-size: calc(1px + var(--head-three));
   line-height: 1.5;
+  margin-bottom: 10px;
 }
 
 .points li {
@@ -150,6 +159,24 @@ footer {
   min-width: 0; 
 }
 
+.swipe{
+  width: 30px;
+  height: auto;
+}
+
+.project-photo{
+  width: 100%;
+  height: auto;
+  padding: 10px;
+}
+
+.swipe-btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
 
 /* TECH PROFICIENCY */
 .proficiencies{
@@ -162,6 +189,13 @@ footer {
 .proficiencies li{
   list-style-position: outside;
   font-weight: 600;
+}
+
+@media screen and (max-width: 768px) {
+  .swipe{
+    width: 25px;
+    height: auto;
+  }
 }
 
 
