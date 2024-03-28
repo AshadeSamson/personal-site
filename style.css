@@ -54,6 +54,9 @@ h1.name {
 .profile-links {
   margin-right: 10px;
   cursor: pointer;
+  text-decoration: none;
+  color: var(--sky-blue);
+  font-weight: bold;
 }
 
 .socials{
@@ -145,6 +148,20 @@ footer {
 .project-item{
   flex: 0 0 100%;
   min-width: 0; 
+}
+
+
+/* TECH PROFICIENCY */
+.proficiencies{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+.proficiencies li{
+  list-style-position: outside;
+  font-weight: 600;
 }
 
 
