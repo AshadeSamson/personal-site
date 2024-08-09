@@ -5,6 +5,11 @@
   box-sizing: border-box;
 }
 
+html{
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+}
+
 :root {
   --header: 1.5rem;
   --head-one: 1.2rem;
@@ -27,11 +32,25 @@ body {
   font-family: 'Montserrat', sans-serif;
   max-width: 750px;
   margin: auto auto;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  height: 100dvh;
 }
 
 section {
   padding: 10px;
+  scroll-snap-align: start;
+  height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+
+section div{
+  width: 100%;
+}
+
 
 .top-heading {
   text-align: center;
@@ -66,6 +85,7 @@ h1.name {
 
 .divider{
   text-align: center;
+  margin-top: 10px;
 }
 
 .horizontal{
@@ -190,6 +210,10 @@ footer {
 .proficiencies li{
   list-style-position: outside;
   font-weight: 600;
+}
+
+footer{
+  width: 100%;
 }
 
 @media screen and (max-width: 768px) {
