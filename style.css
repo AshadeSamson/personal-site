@@ -35,9 +35,31 @@ section {
   padding: 10px;
 }
 
+section.heading{
+  height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .top-heading {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
   padding: 0;
+}
+
+.contact-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-box p{
+  font-weight: bold;
 }
 
 h1.name {
@@ -51,10 +73,10 @@ h1.name {
   display: flex;
   justify-content: center;
   align-items: center;
+  column-gap: 15px;
 }
 
 .profile-links {
-  margin-right: 10px;
   cursor: pointer;
   text-decoration: none;
   color: var(--sky-blue);
