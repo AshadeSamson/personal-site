@@ -17,6 +17,10 @@
   --sky-blue: rgb(152, 152, 235);
 }
 
+html, body {
+  scrollbar-width: thin;
+}
+
 body {
   background-color: rgba(9, 8, 9, 0.9);
   background-image: url('assets/bg.jpg');
@@ -35,6 +39,9 @@ section {
   padding: 10px;
 }
 
+section:not(:first-of-type):not(:last-of-type) {
+  margin-bottom: 100px;
+}
 section.heading{
   height: 100dvh;
   display: flex;
@@ -161,6 +168,8 @@ footer {
   color: var(--white);
   text-align: center;
   padding: 25px;
+  font-size: (1px + var(--head-three));
+
 }
 
 .copyright{
