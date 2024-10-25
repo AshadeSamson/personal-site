@@ -14,6 +14,7 @@
   --orange: rgb(205, 95, 0);
   --white: rgb(250, 250, 250);
   --grey: rgb(226, 219, 219);
+  --greyfade: rgba(250, 250, 250, 0.6);
   --sky-blue: rgb(152, 152, 235);
 }
 
@@ -77,6 +78,13 @@ h1.name {
   font-size: calc(var(--head-one) + 30px);
   letter-spacing: 2px;
   margin: 10px 10px;
+}
+
+h2.role-title {
+  text-align: center;
+  font-size: var(--head-three);
+  margin-bottom: 10px;
+  color: var(--greyfade);
 }
 
 .profile-link-box {
