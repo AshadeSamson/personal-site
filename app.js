@@ -57,3 +57,50 @@ window.addEventListener("scroll", () => {
 
 
 
+
+// SPEED ROLE
+let scrollTimeout;
+let scrollSpeed = 0.85;  
+
+let isTouchDevice = 'ontouchstart' in document.documentElement;
+
+// Desktop: Slow down wheel-based scrolling
+if (!isTouchDevice) {
+    window.addEventListener('wheel', function(event) {
+        event.preventDefault();
+        clearTimeout(scrollTimeout);
+        scrollTimeout = setTimeout(function() {
+            let newScrollPosition = window.scrollY + (event.deltaY * scrollSpeed);
+            window.scrollTo({
+                top: newScrollPosition,
+                behavior: 'auto'
+            });
+        }, 10);
+    }, { passive: false });
+}
+
+// Mobile: Slow down touch-based scrolling
+else {
+    let startY = 0;
+    let currentScroll = 0;
+
+    window.addEventListener('touchstart', function(event) {
+        startY = event.touches[0].clientY; // Record the starting touch position
+        currentScroll = window.scrollY;    // Record the current scroll position
+    });
+
+    window.addEventListener('touchmove', function(event) {
+        event.preventDefault();
+        let touchY = event.touches[0].clientY;
+        let deltaY = startY - touchY; // Calculate the distance moved
+        let newScrollPosition = currentScroll + (deltaY * scrollSpeed); // Adjust scroll based on speed
+        window.scrollTo({
+            top: newScrollPosition,
+            behavior: 'auto'
+        });
+    }, { passive: false });
+}
+
+
+
+
