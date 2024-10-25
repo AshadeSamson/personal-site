@@ -193,8 +193,7 @@ footer {
 }
 
 .swipe{
-  width: 30px;
-  height: auto;
+  object-fit: cover;
 }
 
 .project-photo{
@@ -204,11 +203,37 @@ footer {
 }
 
 .swipe-btn{
+  position: relative;
+  top: -220px; 
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
+  width: 100%; 
+  z-index: 10; 
+}
+
+.swipe-btn .prev, .swipe-btn .next{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
   cursor: pointer;
-  gap: 10px;
+  background-color: var(--black);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 70px;  
+}
+
+.swipe-btn .prev{
+  left: 0;
+  border-top-right-radius: 50%;
+  box-shadow: 3px -2px 2px rgba(0, 0, 0, 0.4);
+}
+
+.swipe-btn .next{
+  right: 0;
+  border-top-left-radius: 50%;
+  box-shadow: -3px -2px 2px rgba(0, 0, 0, 0.4);
 }
 
 
@@ -226,10 +251,7 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
-  .swipe{
-    width: 25px;
-    height: auto;
-  }
+
 }
 
 
