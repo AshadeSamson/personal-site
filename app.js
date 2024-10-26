@@ -1,16 +1,17 @@
-const rootNode = document.querySelector('.project-view')
-const viewNode = document.querySelector('.projects-container')
+function initializeCarousel(){
+  const rootNode = document.querySelector('.project-view')
+  const viewNode = document.querySelector('.projects-container')
 
-const prevButtonNode = rootNode.querySelector('.prev')
-const nextButtonNode = rootNode.querySelector('.next')
+  const prevButtonNode = rootNode.querySelector('.prev')
+  const nextButtonNode = rootNode.querySelector('.next')
 
-const options = { loop: true}
-const emblaApi = EmblaCarousel(viewNode, options)
+  const options = { loop: true}
+  const emblaApi = EmblaCarousel(viewNode, options)
 
-prevButtonNode.addEventListener('click', emblaApi.scrollPrev, false)
-nextButtonNode.addEventListener('click', emblaApi.scrollNext, false)
+  prevButtonNode.addEventListener('click', emblaApi.scrollPrev, false)
+  nextButtonNode.addEventListener('click', emblaApi.scrollNext, false)
 
-
+}
 
 
 // SCROLL ANIMATION
@@ -60,7 +61,7 @@ window.addEventListener("scroll", () => {
 
 // SPEED ROLE
 let scrollTimeout;
-let scrollSpeed = 0.85;  
+let scrollSpeed = 0.9;  
 
 let isTouchDevice = 'ontouchstart' in document.documentElement;
 

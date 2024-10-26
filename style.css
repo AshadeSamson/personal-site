@@ -14,7 +14,7 @@
   --orange: rgb(205, 95, 0);
   --white: rgb(250, 250, 250);
   --grey: rgb(226, 219, 219);
-  --greyfade: rgba(250, 250, 250, 0.6);
+  --greyfade: rgba(255, 255, 255, 0.4);
   --sky-blue: rgb(152, 152, 235);
 }
 
@@ -78,6 +78,7 @@ h1.name {
   font-size: calc(var(--head-one) + 30px);
   letter-spacing: 2px;
   margin: 10px 10px;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 1);
 }
 
 h2.role-title {
