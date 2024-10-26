@@ -61,7 +61,7 @@ window.addEventListener("scroll", () => {
 
 // SPEED ROLE
 let scrollTimeout;
-let scrollSpeed = 0.85;  
+let scrollSpeed = 0.9;  
 
 let isTouchDevice = 'ontouchstart' in document.documentElement;
 
