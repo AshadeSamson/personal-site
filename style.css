@@ -1,4 +1,4 @@
-section:not(:first-of-type):not(:last-of-type) {
+section:not(:first-of-type) {
   margin-bottom: 100px;
 }
 
@@ -7,6 +7,7 @@ section:not(:first-of-type):not(:last-of-type) {
 }
 
 .projects-link {
+  display: inline-block;
   text-decoration: none;
   color: var(--sky-blue);
   cursor: pointer;
@@ -23,12 +24,24 @@ section:not(:first-of-type):not(:last-of-type) {
   text-align: center;
   color: var(--sky-blue); 
   cursor: pointer;
-  transition: all 0.3s ease;
   border-radius: 30px; 
   border: 3px solid var(--sky-blue);
   background-color: transparent;
   box-shadow: 1px 5px 5px black; 
-  overflow: hidden;
+}
+
+.profile-btn:hover, .sticky-button:hover {
+  background-color: var(--greyfade);
+  color: var(--white);
+  border: 2px solid var(--greyfade);
+}
+
+.projects-link:hover{
+  padding: 5px 10px;
+  border-radius: 30px; 
+  background-color: var(--greyfade);
+  color: var(--white);
+  border: 2px solid var(--greyfade)
 }
 
 .title {
@@ -73,7 +86,6 @@ footer {
   text-align: center;
   padding: 25px;
   font-size: (1px + var(--head-three));
-
 }
 
 .copyright{
@@ -155,6 +167,23 @@ footer {
   font-weight: 600;
 }
 
+/* STICKY BUTTON */
+.sticky-button {
+    position: fixed;        
+    bottom: 20px;           
+    right: 10px;            
+    padding: 10px 10px;    
+    background-color: var(--black);  
+    color: var(--sky-blue);          
+    border: solid 2px var(--sky-blue);           
+    border-radius: 30px;    
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); 
+    cursor: pointer;        
+    z-index: 1000;
+    font-weight: 600; 
+    font-family: 'Montserrat', sans-serif;
+  }
+
 
 /* SCROLL ANIMATION */
 
@@ -188,6 +217,27 @@ footer {
 
   .profile-btn {
     font-size: var(--head-three);
+  }
+
+  .sticky-button:hover {
+    background-color: var(--black);
+    font-weight: 600;
+    color: var(--sky-blue);
+    border: solid 2px var(--sky-blue); 
+  }
+
+  .profile-btn:hover {
+    background-color: transparent;
+    color: var(--sky-blue);
+    border: 3px solid var(--sky-blue);
+  }
+
+  .projects-link:hover{
+    padding: unset;
+    border-radius: unset; 
+    background-color: unset;
+    color: var(--sky-blue);
+    border: unset;
   }
 
 }
