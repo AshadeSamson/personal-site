@@ -2,5 +2,5 @@ const projects=[{title:"Terapeuta",description:"Terapeuta is a web application b
     <div><img class="project-photo" src="${t.imageUrl}" alt="project-snapshot"></div>
     <h3 class="title-one">${t.title}</h3>
     <p class="text-small">${t.description}</p>
-    <span><a target="_blank" class="projects-link" href="${t.link}">See Project >>></a></span>
+    <span><a target="_blank" class="projects-link" href="${t.link}">&lt;&lt; See Project &gt;&gt;</a></span>
 `,projectsContainer.appendChild(e)}),initializeCarousel();

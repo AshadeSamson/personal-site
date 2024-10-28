@@ -13,6 +13,24 @@ section:not(:first-of-type):not(:last-of-type) {
   font-weight: bold;
 }
 
+.profile-btn {
+  margin-top: 10px;
+  display: inline-block;
+  padding: 10px 12px;
+  font-size: var(--head-two);
+  font-weight: 600;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  color: var(--sky-blue); 
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 30px; 
+  border: 3px solid var(--sky-blue);
+  background-color: transparent;
+  box-shadow: 1px 5px 5px black; 
+  overflow: hidden;
+}
+
 .title {
   font-size: var(--header);
   color: var(--orange);
@@ -127,8 +145,9 @@ footer {
 .proficiencies{
   display: grid;
   grid-template-columns: repeat(3,1fr);
-  gap: 5px;
-  margin-bottom: 10px;
+  row-gap: 20px;
+  column-gap: 10px;
+  margin-bottom: 20px;
 }
 
 .proficiencies li{
@@ -166,6 +185,10 @@ footer {
 
 
 @media screen and (max-width: 768px) {
+
+  .profile-btn {
+    font-size: var(--head-three);
+  }
 
 }
 
