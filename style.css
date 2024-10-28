@@ -60,6 +60,10 @@ section:not(:first-of-type) {
   margin-bottom: 3px;
 }
 
+p.text{
+  margin-bottom: 10px;
+}
+
 .text,
 .text-list {
   line-height: 1.5;
@@ -86,6 +90,7 @@ footer {
   text-align: center;
   padding: 25px;
   font-size: (1px + var(--head-three));
+  box-shadow: -5px 5px 5px black;
 }
 
 .copyright{
@@ -238,6 +243,10 @@ footer {
     background-color: unset;
     color: var(--sky-blue);
     border: unset;
+  }
+
+  footer {
+    margin-bottom: 50px;
   }
 
 }
