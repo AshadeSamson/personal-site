@@ -84,7 +84,7 @@
 
       h2.role-title {
         text-align: center;
-        font-size: var(--head-three);
+        font-size: calc(var(--head-three) + 2.5px);
         margin-bottom: 10px;
         color: var(--greyfade);
       }
@@ -135,6 +135,19 @@
       .socials{
         width: 25px;
         height: auto;
+      }
+
+      @media screen and (max-width: 768px) {
+        :root {
+        --header: calc(1.5rem - 3px);
+        --head-one: calc(1.2rem - 3px); 
+        --head-two: calc(1rem - 3px);
+        --head-three: calc(0.75rem - 2.5px);
+      }
+
+      h2.role-title {
+        font-size: calc(var(--head-three) + 2px);
+      }
       }
 
     </style>
@@ -238,7 +251,7 @@
       </ul>
       <div class="align-center">
         <a href="mailto:ashadesamson99@gmail.com?subject=Request%20For%20Consultation&body=Hello, %0A%0AYour%20Message%20Here...%0A%0A%0A%0A%0A%0AYour%20Name%20-%0A%0ABusiness%20Name%20(If%20Applicable)%20-">
-        <button class="profile-btn"> &lt;&lt; Book A Free Consultation &gt;&gt; </button></a>
+        <button class="profile-button"> &lt;&lt; Book A Free Consultation &gt;&gt; </button></a>
       </div>
     </section>
     <br/>
