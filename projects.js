@@ -2,6 +2,6 @@ const projects=[{title:"Terapeuta",category:"Frontend, Backend, & AI",descriptio
         <div><img class="project-photo" src="${e.imageUrl}" alt="project-snapshot" width="900" height="600" loading="lazy"></div>
         <h3 class="title-one">${e.title}</h3>
         <p class="text-small category">${e.category}</p>
-        <p class="text-small">${e.description}</p>
+        <p class="text-small project-desc">${e.description}</p>
         <span><a target="_blank" class="projects-link" href="${e.link}">&lt;&lt; See Project &gt;&gt;</a></span>
     `,projectsContainer.appendChild(t)}),initializeCarousel();
