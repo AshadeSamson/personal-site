@@ -1,7 +1,7 @@
 
 # Personal Webiste
 
-This is the codebase for my personal website, a lightweight, fully responsive site created with plain HTML, CSS, and vanilla JavaScript. It highlights my skills and portfolio, featuring custom JavaScript functionality for dynamic content and animations.
+This is the codebase for my personal website, a lightweight, fully responsive site created with HTML-5, CSS, and vanilla JavaScript. It highlights my skills and portfolio, featuring custom JavaScript functionality for dynamic content and animations.
 
 
 ## Key Features
