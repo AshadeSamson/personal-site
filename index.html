@@ -33,6 +33,7 @@
 
       html, body {
         scrollbar-width: thin;
+        position: relative;
       }
 
 
@@ -153,11 +154,11 @@
     </style>
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
-    <link rel="preload" href="style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="style.br.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <script src="https://unpkg.com/embla-carousel/embla-carousel.umd.js" defer></script>
     <script src="https://unpkg.com/embla-carousel-autoplay/embla-carousel-autoplay.umd.js" defer></script>
-    <script src="app.js" defer></script>
-    <script src="projects.js" defer></script>
+    <script src="app.br.js" defer></script>
+    <script src="projects.br.js" defer></script>
     <title>Ashade Samson :: Fullstack Web Developer</title>
   </head>
   <body>
@@ -255,20 +256,29 @@
     </section>
     <br/>
 
-    <section class="projects js-scroll slide-right">
+    <section class="projects-section js-scroll slide-right">
+      <div class="container">
         <h2 class="title">Featured Projects</h2>
         <hr/>
-        <div class="project-view">
-          <div class="projects-container">
-            <div class="project-content">
 
+        <div class="slider-container">
+          <div class="slider">
+            <button id="prev-btn" class="nav-btn">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+
+            <div class="projects-wrapper">
+              <div class="projects-slider" id="projects-slider">
+                <!-- Cards injected from JS -->
+              </div>
             </div>
-          </div>
-          <div class="align-center swipe-btn">
-            <div class="prev"><img class="swipe" src="./assets/left.png" alt="swipe-left" width="64" height="64"></div>
-            <div class="next"><img class="swipe" src="./assets/right.png" alt="swipe-right" width="64" height="64"></div>
+
+            <button id="next-btn" class="nav-btn">
+              <i class="fas fa-chevron-right"></i>
+            </button>
           </div>
         </div>
+      </div>
     </section>
     <br/>
 
@@ -333,6 +343,25 @@
         <h1 class="copyright">&copy; Ashade Samson, 2025. All Rights Reserved</h1>
       </footer>
     </section>
+
+        <!-- Modal -->
+        <div id="project-modal" class="modal hidden">
+          <div class="modal-content">
+            <div class="modal-header">
+              <div>
+                <h3 id="modal-title"></h3>
+                <p id="modal-subtitle"></p>
+              </div>
+              <button id="close-modal" class="close-btn">
+                <i class="fas fa-times"></i>
+              </button>
+            </div>
+            <div id="modal-content" class="modal-body"></div>
+            <div class="modal-footer">
+              <div id="modal-tech-tags" class="tech-tags"></div>
+            </div>
+          </div>
+        </div>
 
 </body>
 </html>
