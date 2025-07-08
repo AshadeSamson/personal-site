@@ -28,11 +28,12 @@
         --white: #fafafa;
         --grey: #e2dbdb;
         --greyfade: #ffffff66;
-        --sky-blue: #0096c7;
+        --sky-blue: #3b82f6;
       }
 
       html, body {
         scrollbar-width: thin;
+        position: relative;
       }
 
 
@@ -158,7 +159,7 @@
     <script src="https://unpkg.com/embla-carousel-autoplay/embla-carousel-autoplay.umd.js" defer></script>
     <script src="app.js" defer></script>
     <script src="projects.js" defer></script>
-    <title>Ashade Samson :: Fullstack Web Developer</title>
+    <title>Ashade Samson | Fullstack Web Developer</title>
   </head>
   <body>
 
@@ -250,29 +251,73 @@
             </p>
           </div>
         </div>
-        <a href="mailto:ashadesamson99@gmail.com?subject=Let's%20Work%20Together&body=Hi%20Samson, %0A%0AYour%20Message%20Here...%0A%0A%0A%0A%0A%0AYour%20Name%20-%0A%0ABusiness%20Name%20(If%20Applicable)%20-" class="hire-me"> &lt;&lt; Hire Me &gt;&gt; </a>
+        <a href="mailto:ashadesamson99@gmail.com?subject=Let's%20Work%20Together&body=Hi%20Samson, %0A%0AYour%20Message%20Here...%0A%0A%0A%0A%0A%0AYour%20Name%20-%0A%0ABusiness%20Name%20(If%20Applicable)%20-" class="hire-me"> Get A Free Website Audit </a>
       </div>
     </section>
     <br/>
 
-    <section class="projects js-scroll slide-right">
+    <section class="projects-section js-scroll slide-right">
+      <div class="container">
         <h2 class="title">Featured Projects</h2>
         <hr/>
-        <div class="project-view">
-          <div class="projects-container">
-            <div class="project-content">
 
+        <div class="slider-container">
+          <div class="slider">
+            <button id="prev-btn" class="nav-btn">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+
+            <div class="projects-wrapper">
+              <div class="projects-slider" id="projects-slider">
+                <!-- Cards injected from JS -->
+              </div>
             </div>
-          </div>
-          <div class="align-center swipe-btn">
-            <div class="prev"><img class="swipe" src="./assets/left.png" alt="swipe-left" width="64" height="64"></div>
-            <div class="next"><img class="swipe" src="./assets/right.png" alt="swipe-right" width="64" height="64"></div>
+
+            <button id="next-btn" class="nav-btn">
+              <i class="fas fa-chevron-right"></i>
+            </button>
           </div>
         </div>
+      </div>
     </section>
     <br/>
 
-    <section class="tech-stack js-scroll slide-left">
+    <section class="certifications-section js-scroll slide-left">
+      <h2 class="title">Certifications</h2>
+      <hr/>
+      <div class="certifications-list">
+        <div class="cert-card">
+          <h3>AWS Certified Cloud Practitioner</h3>
+          <p class="issuer">AWS</p>
+          <p class="date">Tentative: July 2025</p>
+          <a href="#" target="_blank" class="cert-link">View Certificate</a>
+        </div>
+
+        <div class="cert-card">
+          <h3>Career Essentials in Generative-AI</h3>
+          <p class="issuer">Microsoft • Linkedin</p>
+          <p class="date">Issued: Dec 2024</p>
+          <a href="https://www.linkedin.com/learning/certificates/875773c5954c6cb93b47f1d30cfe3340c3dc877c0e8d6c4104af80c65bafe297" target="_blank" class="cert-link">View Certificate</a>
+        </div>
+
+        <div class="cert-card">
+          <h3>Career Essentials in Software Development</h3>
+          <p class="issuer">Microsoft • Linkedin</p>
+          <p class="date">Issued: Jan 2023</p>
+          <a href="https://www.linkedin.com/learning/certificates/3d451280d3de4b98a0554ed9e2b9e4021e8401d18f4174728e1e14c18a672f8d" target="_blank" class="cert-link">View Certificate</a>
+        </div>
+
+        <div class="cert-card">
+          <h3>JavaScript Algorithm & Data Structures</h3>
+          <p class="issuer">freeCodeCamp</p>
+          <p class="date">Issued: Sep 2022</p>
+          <a href="https://www.freecodecamp.org/certification/Ashade_Samson/javascript-algorithms-and-data-structures" target="_blank" class="cert-link">View Certificate</a>
+        </div>
+      </div>
+    </section>
+    <br/>
+
+    <section class="tech-stack js-scroll slide-right">
       <h2 class="title">Tech Proficiencies</h2>
       <hr/>
       <ul class="text-list proficiencies">
@@ -295,12 +340,12 @@
       </ul>
       <div class="align-center">
         <a href="mailto:ashadesamson99@gmail.com?subject=Request%20For%20Free%20Consultation&body=Hello, %0A%0AYour%20Message%20Here...%0A%0A%0A%0A%0A%0AYour%20Name%20-%0A%0ABusiness%20Name%20(If%20Applicable)%20-">
-        <button class="profile-button"> &lt;&lt; Get A Free Website Audit &gt;&gt; </button></a>
+        <button class="profile-button">Hire Me</button></a>
       </div>
     </section>
     <br/>
 
-    <section class="other-skills js-scroll slide-right">
+    <section class="other-skills js-scroll slide-left">
         <h2 class="title">Other Skills</h2>
         <hr/>
         <ul class="text-list">
@@ -312,7 +357,7 @@
     </section>
     <br/>
 
-    <section class="interests js-scroll slide-left">
+    <section class="interests js-scroll slide-right">
         <h2 class="title">Hobbies & Interests</h2>
         <hr/>
         <ul class="text-list">
@@ -333,6 +378,25 @@
         <h1 class="copyright">&copy; Ashade Samson, 2025. All Rights Reserved</h1>
       </footer>
     </section>
+
+        <!-- Modal -->
+        <div id="project-modal" class="modal hidden">
+          <div class="modal-content">
+            <div class="modal-header">
+              <div>
+                <h3 id="modal-title"></h3>
+                <p id="modal-subtitle"></p>
+              </div>
+              <button id="close-modal" class="close-btn">
+                <i class="fas fa-times"></i>
+              </button>
+            </div>
+            <div id="modal-content" class="modal-body"></div>
+            <div class="modal-footer">
+              <div id="modal-tech-tags" class="tech-tags"></div>
+            </div>
+          </div>
+        </div>
 
 </body>
 </html>
