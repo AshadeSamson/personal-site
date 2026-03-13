@@ -4,11 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <meta name="description" content="Ashade Samson's portfolio website">
+    <meta name="description" content="Ashade Samson is a Fullstack Developer building scalable web applications, high performance websites, and modern digital products for businesses and startups.">
     <link rel="shortcut icon" href="assets/favicon.png" type="image/x-icon">
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Montserrat:wght@400;500;600;700;800&display=swap" as="style" onload="this.rel='stylesheet'" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" as="style" onload="this.rel='stylesheet'" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&display=swap" rel="stylesheet">
+
     <style>
 
       *,
@@ -24,18 +28,20 @@
         --head-two: 1rem;
         --head-three: 0.75rem;
         --black: #090809;
-        --orange: #cd5f00;
+        --orange: #65a30d;
         --white: #fafafa;
         --grey: #e2dbdb;
         --greyfade: #ffffff66;
         --sky-blue: #3b82f6;
+        --font-display: 'Clash Display', 'Montserrat', sans-serif;
+        --font-body: 'Geist', 'Montserrat', sans-serif;
+        --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
       }
 
       html, body {
         scrollbar-width: thin;
         position: relative;
       }
-
 
       body {
         background-color: rgba(9, 8, 9, 0.93);
@@ -46,20 +52,26 @@
         background-repeat: no-repeat;
         background-blend-mode: darken;
         color: var(--white);
-        font-family: 'Montserrat', sans-serif;
+        font-family: var(--font-body);
         max-width: 750px;
         margin: auto auto;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      h1, h2, h3, h4, h5, h6 {
+        font-family: var(--font-display);
       }
 
       section {
         padding: 10px;
       }
 
-      .align-center{
+      .align-center {
         text-align: center;
       }
 
-      section.heading{
+      /* ── HERO ───────────────────────────────────────────── */
+      section.heading {
         height: 100dvh;
         display: flex;
         justify-content: center;
@@ -71,46 +83,137 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 100px;
+        gap: 48px;
         padding: 0;
       }
 
       h1.name {
         text-align: center;
-        font-size: calc(var(--head-one) + 30px);
-        letter-spacing: 2px;
-        margin: 10px 10px;
-        text-shadow: 2px 2px 3px rgba(0, 0, 0, 1);
+        font-family: var(--font-display);
+        font-size: clamp(2.4rem, 8vw, 3.8rem);
+        font-weight: 700;
+        letter-spacing: 0.06em;
+        margin: 10px 10px 6px;
+        text-shadow: 2px 2px 16px rgba(0,0,0,0.8);
+        line-height: 1;
       }
 
       h2.role-title {
         text-align: center;
-        font-size: calc(var(--head-three) + 2.5px);
-        margin-bottom: 10px;
+        font-family: var(--font-body);
+        font-size: clamp(0.7rem, 2vw, 0.82rem);
+        font-weight: 400;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
         color: var(--greyfade);
+        margin-bottom: 14px;
       }
 
-      .divider{
-        text-align: center;
-      }
+      /* Orange accent bar under name */
+      .divider { text-align: center; }
 
-      .horizontal{
-        width: 150px;
-        height: 7.5px;
+      .horizontal {
+        width: 44px;
+        height: 3px;
         display: inline-block;
         border: none;
         background-color: var(--orange);
+        border-radius: 999px;
       }
 
+      /* ── HERO CTA ─────────────────────────────────────── */
+      .hero-cta {
+        display: flex;
+        justify-content: center;
+      }
+
+      .view-work-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.6rem;
+        text-decoration: none;
+        color: var(--white);
+        font-family: var(--font-display);
+        font-size: 0.8rem;
+        font-weight: 600;
+        letter-spacing: 0.04em;
+        padding: 0.6rem 0.7rem 0.6rem 1.2rem;
+        border-radius: 999px;
+        border: 1.5px solid rgba(255,255,255,0.2);
+        background: rgba(255,255,255,0.05);
+        transition: all 0.3s var(--ease-out-expo);
+      }
+
+      .view-work-btn .btn-arrow {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 26px;
+        height: 26px;
+        border-radius: 50%;
+        background: var(--orange);
+        font-size: 0.85rem;
+        transition: transform 0.3s var(--ease-out-expo);
+        flex-shrink: 0;
+      }
+
+      .view-work-btn:hover {
+        border-color: rgba(255,255,255,0.45);
+        background: rgba(255,255,255,0.09);
+      }
+
+      .view-work-btn:hover .btn-arrow {
+        transform: translateY(3px);
+      }
+
+      /* ── HERO SOCIALS ─────────────────────────────────── */
       .contact-box {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        gap: 10px;
       }
 
-      .contact-box p{
-        font-weight: bold;
+      .contact-box p {
+        font-size: 0.65rem;
+        font-weight: 500;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--greyfade);
+      }
+
+      .profile-link-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 12px;
+      }
+
+      .profile-links {
+        cursor: pointer;
+        text-decoration: none;
+        color: var(--orange);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        border: 1px solid rgba(255, 255, 255, 0.144);
+        background: rgba(255,255,255,0.04);
+        transition: all 0.25s ease;
+      }
+
+      .profile-links:hover {
+        border-color: var(--orange);
+        background: rgba(100, 163, 13, 0.122);
+        transform: translateY(-2px);
+      }
+
+      .socials {
+        width: 18px;
+        height: auto;
       }
 
       .text-small {
@@ -119,284 +222,419 @@
         margin-bottom: 10px;
       }
 
-      .profile-link-box {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        column-gap: 15px;
-      }
-
-      .profile-links {
-        cursor: pointer;
-        text-decoration: none;
-        color: var(--sky-blue);
-        font-weight: bold;
-      }
-
-      .socials{
-        width: 25px;
-        height: auto;
-      }
-
       @media screen and (max-width: 768px) {
         :root {
-        --header: calc(1.5rem - 2.5px);
-        --head-one: calc(1.2rem - 2.5px); 
-        --head-two: calc(1rem - 2.5px);
-        --head-three: calc(0.75rem - 1px);
-      }
+          --header: calc(1.5rem - 2.5px);
+          --head-one: calc(1.2rem - 2.5px);
+          --head-two: calc(1rem - 2.5px);
+          --head-three: calc(0.75rem - 1px);
+        }
 
-      h2.role-title {
-        font-size: calc(var(--head-three) + 0.65px);
-      }
+        h2.role-title {
+          font-size: calc(var(--head-three) - 0.5px);
+        }
       }
 
     </style>
+
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
-    <link rel="preload" href="style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="./styles/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <script src="https://unpkg.com/embla-carousel/embla-carousel.umd.js" defer></script>
     <script src="https://unpkg.com/embla-carousel-autoplay/embla-carousel-autoplay.umd.js" defer></script>
-    <script src="app.js" defer></script>
-    <script src="projects.js" defer></script>
-    <title>Ashade Samson | Fullstack Web Developer</title>
+    <script src="./scripts/app.js" defer></script>
+    <script src="./scripts/projects.js" defer></script>
+    <title>Ashade Samson | Fullstack Developer</title>
   </head>
   <body>
 
-    <section class="heading">
-      <div class="top-heading">
-        <div>
-          <h1 class="name animate__animated animate__backInUp animate__delay-2s">ASHADE SAMSON</h1>
-          <h2 class="role-title">Fullstack Web Developer</h2>
-          <div class="divider">
-            <hr class="horizontal"/>
+    <main>
+
+      <!-- ── HERO ──────────────────────────────────────────── -->
+      <section class="heading">
+        <div class="top-heading">
+
+          <div>
+            <h1 class="name animate__animated animate__backInUp animate__delay-2s">ASHADE SAMSON</h1>
+            <h2 class="role-title">Fullstack Developer</h2>
+            <div class="divider">
+              <hr class="horizontal"/>
+            </div>
+          </div>
+
+          <div class="hero-cta">
+            <a href="#projects" class="view-work-btn">
+              View My Work
+              <span class="btn-arrow"><i class="fa-solid fa-arrow-down"></i></span>
+            </a>
+          </div>
+
+          <div class="contact-box">
+            <p>Find me on</p>
+            <div class="profile-link-box">
+              <a class="animate__animated animate__fadeInDown animate__delay-3s profile-links" target="_blank" href="https://www.github.com/AshadeSamson" title="GitHub">
+                <i class="fa-brands fa-github"></i>
+              </a>
+              <a class="animate__animated animate__fadeInDown animate__delay-3s profile-links" target="_blank" href="https://www.linkedin.com/in/ashadesamson18" title="LinkedIn">
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
+              <a class="animate__animated animate__fadeInDown animate__delay-3s profile-links" target="_blank" href="/cdn-cgi/l/email-protection#28495b40494c4d5b49455b47461111684f45494144064b4745" title="Email">
+                <i class="fa-solid fa-at"></i>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </section>
+      <br/>
+
+      <!-- ── ABOUT ─────────────────────────────────────────── -->
+      <section class="summary js-scroll slide-left">
+        <span class="section-label">About</span>
+        <h2 class="title">About Me</h2>
+        <p class="text" style="margin-bottom: 12px;">
+          Hi, my name is Samson.
+        </p>
+
+        <p class="text" style="margin-bottom: 12px;">
+          I am a <span class="bold">Fullstack Developer</span> who builds scalable web applications, high conversion business websites, and production ready platforms for startups, corporate teams, and growing businesses.
+        </p>
+
+        <p class="text" style="margin-bottom: 12px;">
+          My experience spans both <span class="bold">client-facing projects</span> and <span class="bold">professional engineering roles</span>, where I design and develop systems that improve business workflows, increase online visibility, and drive measurable results. I have helped businesses increase qualified leads, improve customer experience, and launch reliable web products that support real operations.
+        </p>
+
+        <p class="text" style="margin-bottom: 12px;">
+          I build modern digital products that are fast, reliable, user focused, and designed to scale with real business needs.
+        </p>
+
+        <p class="text">
+          Ready to transform your digital presence or looking for a developer who can turn an idea into a reliable product? Let's work together to turn your vision into reality!
+        </p>
+      </section>
+      <br/>
+
+      <!-- ── SERVICES ──────────────────────────────────────── -->
+      <section class="services js-scroll fade-in-bottom">
+        <span class="section-label">How I Can Help You</span>
+        <h2 class="title">Services</h2>
+        <div class="service-box">
+          <div class="offerings">
+
+            <div class="service-card">
+              <h3 class="service-title">
+                <i class="fa-solid fa-laptop-code"></i>
+                Fullstack Web Development
+              </h3>
+              <p class="service-brief">
+                Building scalable, performant web applications with modern frontend and backend technologies for seamless user experiences.
+              </p>
+            </div>
+
+            <div class="service-card">
+              <h3 class="service-title">
+                <i class="fa-brands fa-react"></i>
+                Frontend Development
+              </h3>
+              <p class="service-brief">
+                Crafting responsive, interactive, user-friendly interfaces with modern frameworks. Websites that convert visitors into customers.
+              </p>
+            </div>
+
+            <div class="service-card">
+              <h3 class="service-title">
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
+                Web Performance Optimization
+              </h3>
+              <p class="service-brief">
+                Enhancing website speed, responsiveness, and efficiency through code optimization, caching, and best performance practices.
+              </p>
+            </div>
+
+            <div class="service-card">
+              <h3 class="service-title">
+                <i class="fa-solid fa-store"></i>
+                E-commerce Development
+              </h3>
+              <p class="service-brief">
+                Developing secure, high-conversion platforms for e-commerce brands with seamless payment integration and optimized performance.
+              </p>
+            </div>
+
+          </div>
+
+          <!-- Services CTA block -->
+          <div class="cta-block">
+            <a href="/cdn-cgi/l/email-protection#2c4d5f444d48495f4d415f434215156c4b414d4540024f4341135f594e46494f58116049580b5f091e1c7b435e47091e1c78434b495844495e0a4e434855116445091e1c7f4d415f4342000c091c6d091c6d7543595e091e1c61495f5f4d4b49091e1c64495e49020202091c6d091c6d091c6d091c6d091c6d091c6d7543595e091e1c624d4149091e1c01091c6d091c6d6e595f4542495f5f091e1c624d4149091e1c04654a091e1c6d5c5c40454f4d4e404905091e1c01" class="hire-me">
+              <i class="fa-solid fa-paper-plane"></i> Hire Me
+            </a>
+            <span class="cta-divider"></span>
+            <a href="/cdn-cgi/l/email-protection#2c4d5f444d48495f4d415f434215156c4b414d4540024f4341135f594e46494f58116049580b5f091e1c7b435e47091e1c78434b495844495e0a4e434855116445091e1c7f4d415f4342000c091c6d091c6d7543595e091e1c61495f5f4d4b49091e1c64495e49020202091c6d091c6d091c6d091c6d091c6d091c6d7543595e091e1c624d4149091e1c01091c6d091c6d6e595f4542495f5f091e1c624d4149091e1c04654a091e1c6d5c5c40454f4d4e404905091e1c01" class="audit-btn">
+              Get a Free Website Audit <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+
+        </div>
+      </section>
+      <br/>
+
+      <!-- ── PROJECTS ──────────────────────────────────────── -->
+      <section id="projects" class="projects-section js-scroll slide-right">
+        <div class="container">
+          <span class="section-label">Featured Projects</span>
+          <h2 class="title">Featured Projects</h2>
+
+          <div class="slider-container">
+            <div class="slider">
+              <button id="prev-btn" class="nav-btn">
+                <i class="fas fa-chevron-left"></i>
+              </button>
+
+              <div class="projects-wrapper">
+                <div class="projects-slider" id="projects-slider">
+                  <!-- Cards injected by projects_br.js -->
+                </div>
+              </div>
+
+              <button id="next-btn" class="nav-btn">
+                <i class="fas fa-chevron-right"></i>
+              </button>
+            </div>
           </div>
         </div>
+      </section>
+      <br/>
 
-        <div class="contact-box">
-            <p class="text-small">Connect with me through these platforms:</p>
-            <div class="profile-link-box">
-              <a class="animate__animated animate__fadeInDown animate__delay-3s profile-links" target="_blank" href="https://www.github.com/AshadeSamson"><img class="socials" src="./assets/github.svg" alt="github-link" width="100" height="100"></a>
-              <a class="animate__animated animate__fadeInDown animate__delay-3s profile-links" target="_blank" href="https://www.linkedin.com/in/ashadesamson18"><img class="socials" src="./assets/linkedin.svg" alt="linkedin-link" width="100" height="100"></a>
-              <a class="animate__animated animate__fadeInDown animate__delay-3s profile-links" target="_blank" href="mailto:ashadesamson99@gmail.com"><img class="socials" src="./assets/mail.svg" alt="gmail-link" width="100" height="100"></a>
+      <!-- ── TECH STACK ─────────────────────────────────────── -->
+      <section class="tech-stack js-scroll slide-left">
+        <span class="section-label">Tech Proficiencies</span>
+        <h2 class="title">Tech Proficiencies</h2>
+
+        <ul class="proficiencies">
+
+          <li>
+            <div class="tech-icon-box">
+              <img src="https://cdn.simpleicons.org/html5/e34f26" alt="HTML5" />
+              <span>HTML5</span>
             </div>
+          </li>
+
+          <li>
+            <div class="tech-icon-box">
+              <img src="https://cdn.simpleicons.org/css/1572b6" alt="CSS3" />
+              <span>CSS3</span>
+            </div>
+          </li>
+
+          <li>
+            <div class="tech-icon-box">
+              <img src="https://cdn.simpleicons.org/javascript/f7df1e" alt="JavaScript" />
+              <span>JavaScript</span>
+            </div>
+          </li>
+
+          <li>
+            <div class="tech-icon-box">
+              <img src="https://cdn.simpleicons.org/typescript/3178c6" alt="TypeScript" />
+              <span>TypeScript</span>
+            </div>
+          </li>
+
+          <li>
+            <div class="tech-icon-box">
+              <img src="https://cdn.simpleicons.org/react/61dafb" alt="React.js" />
+              <span>React.js</span>
+            </div>
+          </li>
+
+          <li>
+            <div class="tech-icon-box">
+              <img src="https://cdn.simpleicons.org/nodedotjs/5fa04e" alt="Node.js" />
+              <span>Node.js</span>
+            </div>
+          </li>
+
+          <li>
+            <div class="tech-icon-box">
+              <img src="https://cdn.simpleicons.org/python/3776ab" alt="Python" />
+              <span>Python</span>
+            </div>
+          </li>
+
+          <li>
+            <div class="tech-icon-box">
+              <img src="https://cdn.simpleicons.org/mongodb/47a248" alt="MongoDB" />
+              <span>MongoDB</span>
+            </div>
+          </li>
+
+          <li>
+            <div class="tech-icon-box">
+              <img src="https://cdn.simpleicons.org/firebase/dd2c00" alt="Firebase" />
+              <span>Firebase</span>
+            </div>
+          </li>
+
+          <li>
+            <div class="tech-icon-box">
+              <img src="https://cdn.simpleicons.org/jest/c21325" alt="Jest" />
+              <span>Jest</span>
+            </div>
+          </li>
+
+          <li>
+            <div class="tech-icon-box">
+              <img src="https://cdn.simpleicons.org/git/f05032" alt="Git" />
+              <span>Git</span>
+            </div>
+          </li>
+
+          <li>
+            <div class="tech-icon-box">
+              <img src="https://cdn.simpleicons.org/github/ffffff" alt="GitHub" />
+              <span>GitHub</span>
+            </div>
+          </li>
+
+          <li>
+            <div class="tech-icon-box">
+              <img src="https://cdn.simpleicons.org/php/4479a1" alt="PHP" />
+              <span>PHP</span>
+            </div>
+          </li>
+
+          <li>
+            <div class="tech-icon-box">
+              <img src="https://cdn.simpleicons.org/mysql/4479a1" alt="SQL" />
+              <span>SQL</span>
+            </div>
+          </li>
+
+          <li>
+            <div class="tech-icon-box">
+              <img src="https://cdn.simpleicons.org/wordpress/21759b" alt="WordPress" />
+              <span>WordPress</span>
+            </div>
+          </li>
+
+        </ul>
+
+        <div class="align-center" style="margin-top: 1.5rem;">
+          <a href="/cdn-cgi/l/email-protection#c3a2b0aba2a7a6b0a2aeb0acadfafa83a4aea2aaafeda0acaefcb0b6a1a9a6a0b7fe91a6b2b6a6b0b7e6f1f385acb1e6f1f385b1a6a6e6f1f380acadb0b6afb7a2b7aaacade5a1aca7bafe8ba6afafacefe3e6f382e6f3829aacb6b1e6f1f38ea6b0b0a2a4a6e6f1f38ba6b1a6ededede6f382e6f382e6f382e6f382e6f382e6f3829aacb6b1e6f1f38da2aea6e6f1f3eee6f382e6f38281b6b0aaada6b0b0e6f1f38da2aea6e6f1f3eb8aa5e6f1f382b3b3afaaa0a2a1afa6eae6f1f3ee">
+            <button class="profile-button"><i class="fa-solid fa-paper-plane"></i> Let's Work Together</button>
+          </a>
         </div>
-      </div>
-    </section>
-    <br/>
+      </section>
+      <br/>
 
-    <section class="summary js-scroll slide-left">
-        <h2 class="title">About Me</h2>
-        <hr/>
-        <p class="text" style="margin-bottom: 10px;">
-          Hi, My Name is Samson. &#128578
-        </p>
-        <p class="text" style="margin-bottom: 10px;">
-           I'm a <span class="bold">Fullstack Web Developer</span> building high-conversion websites and web apps for corporate, e-commerce, and SaaS brands. I've helped clients boost leads by 50%+ and sales by 40% with user-friendly, scalable solutions that grow their bottom line.
-        </p>
-        <p class="text">
-          Ready to transform your online presence? Let’s work together to turn your vision into reality!
-        </p>
-    </section>
-    <br/>
+      <!-- ── CERTIFICATIONS ────────────────────────────────── -->
+      <section class="certifications-section js-scroll slide-right">
+        <span class="section-label">Certifications</span>
+        <h2 class="title">Certifications</h2>
+        <div class="certifications-list">
 
-    <section class="education js-scroll fade-in-bottom">
+          <div class="cert-card">
+            <h3>AWS Certified Cloud Practitioner</h3>
+            <p class="issuer">Amazon Web Services (AWS)</p>
+            <p class="date">Issued: Aug 2025</p>
+            <a href="https://www.credly.com/badges/71fdcbdb-ca40-4490-b710-ac768d1c018f" target="_blank" class="cert-link">View Certificate <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+
+          <div class="cert-card">
+            <h3>Career Essentials in Generative AI</h3>
+            <p class="issuer">Microsoft · LinkedIn</p>
+            <p class="date">Issued: Dec 2024</p>
+            <a href="https://www.linkedin.com/learning/certificates/875773c5954c6cb93b47f1d30cfe3340c3dc877c0e8d6c4104af80c65bafe297" target="_blank" class="cert-link">View Certificate <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+
+          <div class="cert-card">
+            <h3>Career Essentials in Software Development</h3>
+            <p class="issuer">Microsoft · LinkedIn</p>
+            <p class="date">Issued: Jan 2023</p>
+            <a href="https://www.linkedin.com/learning/certificates/3d451280d3de4b98a0554ed9e2b9e4021e8401d18f4174728e1e14c18a672f8d" target="_blank" class="cert-link">View Certificate <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+
+          <div class="cert-card">
+            <h3>JavaScript Algorithms & Data Structures</h3>
+            <p class="issuer">freeCodeCamp</p>
+            <p class="date">Issued: Sep 2022</p>
+            <a href="https://www.freecodecamp.org/certification/Ashade_Samson/javascript-algorithms-and-data-structures" target="_blank" class="cert-link">View Certificate <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+
+        </div>
+      </section>
+      <br/>
+
+      <!-- ── EDUCATION ─────────────────────────────────────── -->
+      <section class="education js-scroll fade-in-bottom">
+        <span class="section-label">Education</span>
         <h2 class="title">Education</h2>
-        <hr/>
-        <h3 class="title-one">Federal University of Agriculture, Abeokuta.</h3>
+        <h3 class="title-one">Federal University of Agriculture, Abeokuta</h3>
         <p class="title-two">Bachelor of Science (BSc) in Computer Science</p>
         <p class="text-small">December, 2023</p>
-    </section>
-    <br/>
+      </section>
+      <br/>
 
-    <section class="services js-scroll slide-left">
-      <h2 class="title">What I Offer</h2>
-      <hr/>
-      <div class="service-box">
-        <div class="offerings">
-          <div class="service-card">
-            <h3 class="service-title">
-              <i class="fa-solid fa-laptop-code"></i>
-                Fullstack Web Development
-            </h3>
-            <p class="service-brief">
-              Building scalable, performant web applications with modern frontend and backend technologies for seamless user experiences.
-            </p>
-          </div>
-          <div class="service-card">
-            <h3 class="service-title">
-              <i class="fa-brands fa-react"></i>
-                Frontend Development
-            </h3>
-            <p class="service-brief">
-                Crafting responsive, interactive, user-friendly user interfaces with modern frameworks. Websites that convert visitors into customers.
-            </p>
-          </div>
-          <div class="service-card">
-            <h3 class="service-title">
-              <i class="fa-solid fa-wand-magic-sparkles"></i>
-                Web Performance Optimization
-            </h3>
-            <p class="service-brief">
-              Enhancing website speed, responsiveness, and efficiency through code optimization, caching, and best performance practices.
-            </p>
-          </div>
-          <div class="service-card">
-            <h3 class="service-title">
-              <i class="fa-solid fa-store"></i>
-                E-commerce Development
-            </h3>
-            <p class="service-brief">
-              Developing secure, high-conversion, and user-friendly platforms for E-commerce brands with seamless payment integration and optimized performance.
-            </p>
-          </div>
-        </div>
-        <a href="mailto:ashadesamson99@gmail.com?subject=Let's%20Work%20Together&body=Hi%20Samson, %0A%0AYour%20Message%20Here...%0A%0A%0A%0A%0A%0AYour%20Name%20-%0A%0ABusiness%20Name%20(If%20Applicable)%20-" class="hire-me"> Get A Free Website Audit </a>
-      </div>
-    </section>
-    <br/>
-
-    <section class="projects-section js-scroll slide-right">
-      <div class="container">
-        <h2 class="title">Featured Projects</h2>
-        <hr/>
-
-        <div class="slider-container">
-          <div class="slider">
-            <button id="prev-btn" class="nav-btn">
-              <i class="fas fa-chevron-left"></i>
-            </button>
-
-            <div class="projects-wrapper">
-              <div class="projects-slider" id="projects-slider">
-                <!-- Cards injected from JS -->
-              </div>
-            </div>
-
-            <button id="next-btn" class="nav-btn">
-              <i class="fas fa-chevron-right"></i>
-            </button>
-          </div>
-        </div>
-      </div>
-    </section>
-    <br/>
-
-    <section class="certifications-section js-scroll slide-left">
-      <h2 class="title">Certifications</h2>
-      <hr/>
-      <div class="certifications-list">
-        <div class="cert-card">
-          <h3>AWS Certified Cloud Practitioner</h3>
-          <p class="issuer">AWS</p>
-          <p class="date">Tentative: July 2025</p>
-          <a href="#" target="_blank" class="cert-link">View Certificate</a>
-        </div>
-
-        <div class="cert-card">
-          <h3>Career Essentials in Generative-AI</h3>
-          <p class="issuer">Microsoft • Linkedin</p>
-          <p class="date">Issued: Dec 2024</p>
-          <a href="https://www.linkedin.com/learning/certificates/875773c5954c6cb93b47f1d30cfe3340c3dc877c0e8d6c4104af80c65bafe297" target="_blank" class="cert-link">View Certificate</a>
-        </div>
-
-        <div class="cert-card">
-          <h3>Career Essentials in Software Development</h3>
-          <p class="issuer">Microsoft • Linkedin</p>
-          <p class="date">Issued: Jan 2023</p>
-          <a href="https://www.linkedin.com/learning/certificates/3d451280d3de4b98a0554ed9e2b9e4021e8401d18f4174728e1e14c18a672f8d" target="_blank" class="cert-link">View Certificate</a>
-        </div>
-
-        <div class="cert-card">
-          <h3>JavaScript Algorithm & Data Structures</h3>
-          <p class="issuer">freeCodeCamp</p>
-          <p class="date">Issued: Sep 2022</p>
-          <a href="https://www.freecodecamp.org/certification/Ashade_Samson/javascript-algorithms-and-data-structures" target="_blank" class="cert-link">View Certificate</a>
-        </div>
-      </div>
-    </section>
-    <br/>
-
-    <section class="tech-stack js-scroll slide-right">
-      <h2 class="title">Tech Proficiencies</h2>
-      <hr/>
-      <ul class="text-list proficiencies">
-        <li>AWS</li>
-        <li>CSS</li> 
-        <li>Firebase</li>
-        <li>Git</li>
-        <li>GitHub</li>
-        <li>HTML-5</li>
-        <li>JavaScript</li>
-        <li>Jest</li>
-        <li>MongoDB</li> 
-        <li>Node.js</li>
-        <li>Python</li>
-        <li>React.js</li>
-        <li>SQL</li>
-        <li>TypeScript</li>
-        <li>WordPress</li>
-        
-      </ul>
-      <div class="align-center">
-        <a href="mailto:ashadesamson99@gmail.com?subject=Request%20For%20Free%20Consultation&body=Hello, %0A%0AYour%20Message%20Here...%0A%0A%0A%0A%0A%0AYour%20Name%20-%0A%0ABusiness%20Name%20(If%20Applicable)%20-">
-        <button class="profile-button">Hire Me</button></a>
-      </div>
-    </section>
-    <br/>
-
-    <section class="other-skills js-scroll slide-left">
+      <!-- ── OTHER SKILLS ──────────────────────────────────── -->
+      <section class="other-skills js-scroll slide-left">
+        <span class="section-label">Other Skills</span>
         <h2 class="title">Other Skills</h2>
-        <hr/>
         <ul class="text-list">
           <li>Graphic Design</li>
           <li>Interpersonal Communication</li>
           <li>Teamwork</li>
-          <li>Project Coordination and Management</li>  
+          <li>Project Coordination and Management</li>
         </ul>
-    </section>
-    <br/>
+      </section>
+      <br/>
 
-    <section class="interests js-scroll slide-right">
+      <!-- ── INTERESTS ─────────────────────────────────────── -->
+      <section class="interests js-scroll slide-right">
+        <span class="section-label">Hobbies & Interests</span>
         <h2 class="title">Hobbies & Interests</h2>
-        <hr/>
         <ul class="text-list">
           <li>Programming / Software Engineering</li>
           <li>Artificial Intelligence</li>
           <li>Cloud Applications</li>
           <li>Football</li>
         </ul>
-    </section>
-    <br/>
+      </section>
+      <br/>
 
-    <a href="mailto:ashadesamson99@gmail.com?subject=Interested%20In%20Collaboration&body=Hi%20Samson, %0A%0AYour%20Message%20Here...%0A%0A%0A%0A%0A%0AYour%20Name%20-%0A%0ABusiness%20Name%20(If%20Applicable)%20-">
-    <button class="animate__animated animate__zoomIn animate__delay-5s sticky-button">Let's Talk</button>
-    </a>
+      <!-- ── STICKY CTA ─────────────────────────────────────── -->
+      <a href="/cdn-cgi/l/email-protection#f293819a93969781939f819d9ccbcbb2959f939b9edc919d9fcd81879098979186cfbb9c8697809781869796d7c0c2bb9cd7c0c2b19d9e9e93909d8093869b9d9cd4909d968bcfba9bd7c0c2a1939f819d9cded2d7c2b3d7c2b3ab9d8780d7c0c2bf978181939597d7c0c2ba978097dcdcdcd7c2b3d7c2b3d7c2b3d7c2b3d7c2b3d7c2b3ab9d8780d7c0c2bc939f97d7c0c2dfd7c2b3d7c2b3b087819b9c978181d7c0c2bc939f97d7c0c2dabb94d7c0c2b382829e9b9193909e97dbd7c0c2df">
+        <button class="animate__animated animate__zoomIn animate__delay-5s sticky-button">Let's Talk <i class="fa-solid fa-paper-plane"></i></button>
+      </a>
 
-    <section class="footer">
-      <footer>
-        <h1 class="copyright">&copy; Ashade Samson, 2025. All Rights Reserved</h1>
-      </footer>
-    </section>
-
-        <!-- Modal -->
-        <div id="project-modal" class="modal hidden">
-          <div class="modal-content">
-            <div class="modal-header">
-              <div>
-                <h3 id="modal-title"></h3>
-                <p id="modal-subtitle"></p>
-              </div>
-              <button id="close-modal" class="close-btn">
-                <i class="fas fa-times"></i>
-              </button>
+      <!-- ── MODAL ──────────────────────────────────────────── -->
+      <div id="project-modal" class="modal hidden">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div>
+              <h3 id="modal-title"></h3>
+              <p id="modal-subtitle"></p>
             </div>
-            <div id="modal-content" class="modal-body"></div>
-            <div class="modal-footer">
-              <div id="modal-tech-tags" class="tech-tags"></div>
-            </div>
+            <button id="close-modal" class="close-btn">
+              <i class="fas fa-times"></i>
+            </button>
+          </div>
+          <div id="modal-content" class="modal-body">
+            <!-- Filled by JS -->
+          </div>
+          <div class="modal-footer" id="modal-tech-tags">
+            <!-- Tech tags filled by JS -->
           </div>
         </div>
+      </div>
 
-</body>
+      <!-- ── FOOTER ─────────────────────────────────────────── -->
+      <section class="footer">
+        <footer>
+          <p class="copyright">&copy; Ashade Samson, 2026. All Rights Reserved</p>
+        </footer>
+      </section>
+
+    </main>
+
+  </body>
 </html>

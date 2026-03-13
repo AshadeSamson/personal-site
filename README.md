@@ -15,7 +15,7 @@ This is the codebase for my personal website, a lightweight, fully responsive si
 
 | Color             | Hex                                                                |
 | ----------------- | ------------------------------------------------------------------ |
-| Orange | #cd5f00 |
+| Orange | #65a30d |
 | Black | #090809 |
 | White | #fafafa |
 | Grey | #ffffff66 |
